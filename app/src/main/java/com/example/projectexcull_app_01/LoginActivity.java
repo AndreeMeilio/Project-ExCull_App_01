@@ -4,34 +4,75 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
+    private static final String TAG = "LoginActivity";
 
     private EditText login_username, login_password;
     private Button login_button;
-    private TextView login_into_signup;
+    private TextView login_into_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Log.d(TAG, "onCreate: start");
 
         login_username = (EditText) findViewById(R.id.login_username);
+        login_username.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                login_username.setBackgroundResource(android.R.color.transparent);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!s.toString().equalsIgnoreCase("")){
+                    login_username.setBackgroundResource(android.R.color.transparent);
+                } else {
+                    login_username.setHint(null);
+                }
+            }
+        });
+
         login_password = (EditText) findViewById(R.id.login_password);
 
-        login_into_signup = (TextView) findViewById(R.id.login_into_register);
-        login_into_signup.setOnClickListener(new View.OnClickListener() {
+        login_into_register = (TextView) findViewById(R.id.login_into_register);
+        login_into_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent into_signup_activity = new Intent(getApplicationContext(), RegisterActivity.class);
-                startActivity(into_signup_activity);
+                Intent into_register_activity = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(into_register_activity);
             }
         });
 
         login_button = (Button) findViewById(R.id.login_button);
+        login_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = login_username.getText().toString();
+                String password = login_password.getText().toString().trim();
+
+                if (username.equalsIgnoreCase("")){
+                    login_username.setError("Please Insert Your Username");
+                }
+                if (password.equalsIgnoreCase("")){
+                    login_password.setError("Please Insert Your Password");
+                }
+            }
+        });
     }
 }
