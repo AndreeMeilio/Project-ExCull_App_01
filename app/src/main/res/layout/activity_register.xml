@@ -10,11 +10,12 @@
     tools:context=".LoginActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:backgroundTint="@color/tundora"
         app:cardCornerRadius="15dp"
-        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,6 +26,84 @@
             android:orientation="vertical"
             android:paddingHorizontal="15dp">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:src="@drawable/logo_erzie" />
+
+
+            <EditText
+                style="@style/RegisterEditText"
+                android:id="@+id/register_username"
+                android:hint="Username"
+                android:inputType="text"
+                android:backgroundTint="@color/white"/>
+
+            <EditText
+                style="@style/RegisterEditText"
+                android:id="@+id/register_email"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="@color/white"/>
+
+            <EditText
+                style="@style/RegisterEditText"
+                android:id="@+id/register_password"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:backgroundTint="@color/white"/>
+
+            <EditText
+                style="@style/RegisterEditText"
+                android:id="@+id/register_confirm_password"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:backgroundTint="@color/white"/>
+
+            <EditText
+                style="@style/RegisterEditText"
+                android:id="@+id/register_jurusan"
+                android:hint="Jurusan"
+                android:inputType="text"
+                android:backgroundTint="@color/white"/>
+
+            <EditText
+                style="@style/RegisterEditText"
+                android:id="@+id/register_kelas"
+                android:hint="Kelas"
+                android:inputType="text"
+                android:backgroundTint="@color/white"/>
+
+            <Button
+                style="@style/MainButton"
+                android:id="@+id/register_button"
+                android:layout_marginVertical="20dp"
+                android:text="Sign Up" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Didn't Have An Account?"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:alpha="0.3"/>
+
+                <TextView
+                    android:id="@+id/register_into_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textview1"
+                    android:text="Sign Up"
+                    android:textColor="@color/blue"/>
+            </RelativeLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
