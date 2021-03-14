@@ -1,2 +1,2 @@
 # Project-ExCull_App_01
-Project PKK membuat sebuah aplikasi yang berbasis mobile
+Project ExCull_App_01 adalah sebuah project yand dijalankan oleh ARCHIPELFLUGEL dan berbasis pada mobile application.
