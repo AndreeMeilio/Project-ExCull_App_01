@@ -38,7 +38,7 @@
                 <EditText
                     style="@style/LoginEditTextStyle"
                     android:id="@+id/login_username"
-                    android:hint="Username"
+                    android:hint="@string/login_username_hint"
                     android:maxLines="1"
                     android:inputType="text"
                     android:backgroundTint="@color/white"/>
@@ -52,7 +52,7 @@
                 <EditText
                     style="@style/LoginEditTextStyle"
                     android:id="@+id/login_password"
-                    android:hint="Password"
+                    android:hint="@string/login_password_hint"
                     android:inputType="textPassword"
                     android:backgroundTint="@color/white"/>
             </androidx.cardview.widget.CardView>
@@ -61,7 +61,7 @@
                 style="@style/MainButton"
                 android:id="@+id/login_button"
                 android:layout_marginBottom="60dp"
-                android:text="Log In"/>
+                android:text="@string/login_button"/>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
                     android:id="@+id/textview1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Didn't Have An Account?"
+                    android:text="@string/login_havent_acccount"
                     android:textSize="15sp"
                     android:textColor="@color/white"
                     android:alpha="0.3"/>
@@ -82,8 +82,8 @@
                     android:id="@+id/login_into_register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/textview1"
-                    android:text="Sign Up"
+                    android:layout_toEndOf="@+id/textview1"
+                    android:text="@string/login_signup_button"
                     android:textColor="@color/blue"/>
             </RelativeLayout>
         </LinearLayout>
