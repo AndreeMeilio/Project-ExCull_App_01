@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shark"
+    tools:context=".UsersAboutActivity">
+
+    <FrameLayout
+        android:id="@+id/biodata_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tundora">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="-30dp"
+                app:cardCornerRadius="30dp"
+                android:layout_below="@+id/users_about_home"
+                app:cardElevation="0dp"
+                android:backgroundTint="@color/tundora">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/darksix"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:paddingTop="30dp"
+                    android:cropToPadding="true"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/users_about_editprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:text="@string/edit_profile_menu"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="25dp" />
+
+            <TextView
+                android:id="@+id/users_about_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/home_menu"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/users_about_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:text="@string/logout_menu"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp" />
+
+            <TextView
+                android:id="@+id/score_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score_textview"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/cardview_image"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/value_score_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/value_score"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/score_textview"
+                android:layout_marginStart="23dp" />
+
+            <TextView
+                android:id="@+id/rank_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rank_textview"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_toEndOf="@+id/score_textview"
+                android:layout_below="@+id/cardview_image"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:text="@string/value_rank"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/rank_textview"
+                android:layout_toEndOf="@+id/value_score_textview"/>
+
+            <TextView
+                android:id="@+id/about_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/userabout_textview"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_below="@+id/cardview_image"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/value_user_about"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_below="@+id/about_textview"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_cardview"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_below="@+id/cardview_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-75dp"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:id="@+id/users_about_profilepicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/monoandsix"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/users_about_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_textview"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/profile_cardview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="15dp"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/club_joined_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/joined_club"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/biodata_layout"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:id="@+id/users_club_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_orbit"
+        android:layout_below="@+id/club_joined_textview"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_club_icon"
+        android:layout_below="@id/club_joined_textview"
+        android:layout_toEndOf="@+id/users_club_1"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"/>
+
+</RelativeLayout>
