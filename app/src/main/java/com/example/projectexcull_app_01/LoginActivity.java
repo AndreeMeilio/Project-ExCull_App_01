@@ -65,14 +65,31 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = login_username.getText().toString();
                 String password = login_password.getText().toString().trim();
+                boolean emptyField = false;
 
                 if (username.equalsIgnoreCase("")){
                     login_username.setError("Please Insert Your Username");
+                    emptyField = true;
                 }
                 if (password.equalsIgnoreCase("")){
                     login_password.setError("Please Insert Your Password");
+                    emptyField = true;
+                }
+                if (!emptyField){
+                    Intent into_profile_activity = new Intent(getApplicationContext(), UsersAboutActivity.class);
+                    overridePendingTransition(0, 0);
+                    into_profile_activity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    finish();
+                    overridePendingTransition(0, 0);
+                    startActivity(into_profile_activity);
                 }
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy: start");
     }
 }
