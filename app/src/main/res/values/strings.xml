@@ -1,3 +1,39 @@
 <resources>
+
+    //this is all the strings that store in activity_login.xml
+    <string name="login_username_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button">Log In</string>
+    <string name="login_havent_acccount">Did Not Have An Account ?</string>
+    <string name="login_signup_button">Sign Up</string>
+
+    //this is all the strings that store in activity_register.xml
+    <string name="register_username_hint">Username</string>
+    <string name="register_email_hint">Email</string>
+    <string name="register_password_hint">Password</string>
+    <string name="register_confirmpassword_hint">Confirm Password</string>
+    <string name="register_jurusan_hint">Jurusan</string>
+    <string name="register_kelas_hint">Kelas</string>
+    <string name="register_signup_button">Sign Up</string>
+    <string name="register_have_account">Already Have An Account ?</string>
+    <string name="register_signin_button">Sign In</string>
+
+    //this is all the strings that store in activity_users_about.xml
     <string name="app_name">Project ExCull_App_01</string>
+    <string name="edit_profile_menu">Edit Profile</string>
+    <string name="home_menu">Home</string>
+    <string name="logout_menu">Log Out</string>
+    <string name="score_textview">Score</string>
+    <string name="value_score">1500</string>
+    <string name="rank_textview">Rank</string>
+    <string name="value_rank">#10</string>
+    <string name="userabout_textview">User About</string>
+
+    <string name="value_user_about">
+        "Positive is the<br/>
+        key of success"
+    </string>
+
+    <string name="username_textview">Avio .D</string>
+    <string name="joined_club">Club Joined</string>
 </resources>
