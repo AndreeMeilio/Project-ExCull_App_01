@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/tundora"
+    app:cardCornerRadius="15dp"
+    android:layout_marginBottom="20dp">
+
+    <RelativeLayout
+        android:id="@+id/relative_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/recycler_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/logo_orbit"
+            android:background="@color/torea_bay"/>
+
+        <TextView
+            android:id="@+id/task_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Assignment"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@+id/recycler_image"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/recycler_task_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@+id/recycler_image"
+            android:layout_below="@+id/task_status"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/recycler_teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/recycler_task_name"
+            android:layout_toEndOf="@+id/recycler_image"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:id="@+id/recycler_deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/recycler_task_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="5dp"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

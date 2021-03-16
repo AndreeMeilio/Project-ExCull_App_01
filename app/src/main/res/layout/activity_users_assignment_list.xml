@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shark"
+    tools:context=".UsersAssignmentList">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topmenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="55"
+                android:background="@color/abbey"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/sortBy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/sort_by"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:paddingStart="15dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="55"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:adjustViewBounds="true"
+                    android:layout_toEndOf="@+id/sortBy"
+                    android:src="@drawable/group_12"/>
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="45"
+                android:background="@color/tundora">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/small_profile_cardview"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="25dp"
+                    app:cardCornerRadius="100dp">
+
+                    <ImageView
+                        android:id="@+id/small_users_about_profilepicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/monoandsix"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/small_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/username_textview"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:layout_toEndOf="@+id/small_profile_cardview"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/users_status"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:layout_below="@+id/small_username"
+                    android:layout_toEndOf="@+id/small_profile_cardview"
+                    android:layout_marginStart="6dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/assignment_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="35dp"
+        android:layout_below="@+id/topmenu"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/abbey"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_90"
+            android:paddingVertical="10dp"
+            android:layout_marginStart="50dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_88"
+            android:paddingVertical="10dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_89"
+            android:paddingVertical="10dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="50dp"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
