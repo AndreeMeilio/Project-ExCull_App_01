@@ -30,10 +30,36 @@
     <string name="userabout_textview">User About</string>
 
     <string name="value_user_about">
-        "Positive is the<br/>
+        "Positive is the<br />
         key of success"
     </string>
 
-    <string name="username_textview">Avio .D</string>
+    <string name="username_textview">Mono</string>
     <string name="joined_club">Club Joined</string>
+
+
+    //this is all the strings that store in Users Assignment including the arrays for recyclerView
+    <string name="sort_by">Sort By</string>
+    <string name="users_status">Student</string>
+
+    <string-array name="task_name">
+        <item>Relative Layout</item>
+        <item>Linear Layout</item>
+        <item>Table Layout</item>
+        <item>Constraint Layout</item>
+    </string-array>
+    <string-array name="teacher_name">
+        <item>Bu Arne</item>
+        <item>Bu Arne</item>
+        <item>Bu Arne</item>
+        <item>Bu Arne</item>
+    </string-array>
+
+    <string-array name="deadline">
+        <item>Deadline: 1/03/2021</item>
+        <item>Deadline: 21/03/2021</item>
+        <item>Deadline: 23/02/2021</item>
+        <item>Deadline: 14/02/2021</item>
+    </string-array>
+
 </resources>
