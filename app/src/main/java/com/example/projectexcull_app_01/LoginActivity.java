@@ -76,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                     emptyField = true;
                 }
                 if (!emptyField){
-                    Intent into_profile_activity = new Intent(getApplicationContext(), UsersAboutActivity.class);
+                    Intent into_profile_activity = new Intent(getApplicationContext(), UsersAssignmentList.class);
                     overridePendingTransition(0, 0);
                     into_profile_activity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     finish();
@@ -85,11 +85,5 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(TAG, "onDestroy: start");
     }
 }
