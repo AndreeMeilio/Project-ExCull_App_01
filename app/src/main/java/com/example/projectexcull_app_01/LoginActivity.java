@@ -26,27 +26,6 @@ public class LoginActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: start");
 
         login_username = (EditText) findViewById(R.id.login_username);
-        login_username.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                login_username.setBackgroundResource(android.R.color.transparent);
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (!s.toString().equalsIgnoreCase("")){
-                    login_username.setBackgroundResource(android.R.color.transparent);
-                } else {
-                    login_username.setHint(null);
-                }
-            }
-        });
 
         login_password = (EditText) findViewById(R.id.login_password);
 
