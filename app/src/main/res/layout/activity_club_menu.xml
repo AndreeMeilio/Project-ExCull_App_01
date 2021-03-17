@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tundora"
+    tools:context=".ClubMenu">
+
+    <TextView
+        android:id="@+id/menuclub_back_to_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:text="@string/back_to_profile"
+        android:gravity="center_vertical"
+        android:layout_gravity="right"
+        android:layout_marginEnd="20dp"
+        android:textSize="17sp"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/shark">
+
+        <ImageView
+            android:id="@+id/photo_orbit_clubmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_orbit"/>
+
+        <TextView
+            android:id="@+id/name_club_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/photo_orbit_clubmenu"
+            android:layout_marginStart="15dp"
+            android:text="@string/orbit"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/member_club_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/photo_orbit_clubmenu"
+            android:layout_below="@+id/name_club_menu"
+            android:layout_marginStart="15dp"
+            android:text="@string/members"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/online_club_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/photo_orbit_clubmenu"
+            android:layout_below="@+id/member_club_menu"
+            android:layout_marginStart="15dp"
+            android:text="@string/count_online"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+        
+        <View
+            android:id="@+id/just_a_line"
+            android:layout_width="4dp"
+            android:layout_height="90dp"
+            android:layout_toEndOf="@+id/member_club_menu"
+            android:background="@color/tundora"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/textview_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/just_a_line"
+            android:layout_marginStart="15dp"
+            android:text="@string/your_score"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/value_textview_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/just_a_line"
+            android:layout_below="@+id/textview_score"
+            android:layout_marginStart="15dp"
+            android:text="@string/value_your_score"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/textview_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/just_a_line"
+            android:layout_below="@id/value_textview_score"
+            android:layout_marginStart="15dp"
+            android:text="@string/your_rank"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/value_textview_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/just_a_line"
+            android:layout_below="@+id/textview_rank"
+            android:layout_marginStart="15dp"
+            android:text="@string/value_your_rank"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/textview_club_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_below="@id/photo_orbit_clubmenu"
+            android:text="@string/club_desc"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:backgroundTint="@color/abbey"
+            android:layout_below="@id/textview_club_desc"
+            app:cardCornerRadius="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textview_club_desc"
+                android:background="@android:color/transparent"
+                android:textColor="@color/white"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/abbey"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:id="@+id/photo_assignment_clubmenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/group_21"/>
+
+            <TextView
+                android:id="@+id/textview_assignment_clubmenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/photo_assignment_clubmenu"
+                android:layout_marginStart="15dp"
+                android:text="@string/assignment"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/value_textview_assignment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/photo_assignment_clubmenu"
+                android:layout_below="@+id/textview_assignment_clubmenu"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/notif_assignment"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/abbey"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:id="@+id/photo_chatroom_clubmenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/group_35"/>
+
+            <TextView
+                android:id="@+id/textview_chatroom_clubmenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/photo_chatroom_clubmenu"
+                android:layout_marginStart="15dp"
+                android:text="@string/chatroom"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/value_textview_chatroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/photo_chatroom_clubmenu"
+                android:layout_below="@+id/textview_chatroom_clubmenu"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/notif_chatroom"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/abbey"
+        android:layout_marginHorizontal="30dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:id="@+id/photo_hof_clubmenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/group_36"/>
+
+            <TextView
+                android:id="@+id/textview_hof_clubmenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/photo_hof_clubmenu"
+                android:layout_marginStart="15dp"
+                android:text="@string/hof"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/value_textview_hof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/photo_hof_clubmenu"
+                android:layout_below="@+id/textview_hof_clubmenu"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/notif_hof"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

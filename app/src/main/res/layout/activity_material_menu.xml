@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/abbey"
+    tools:context=".MaterialMenu">
+
+    <TextView
+        android:id="@+id/material_menu_back"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:layout_gravity="right"
+        android:text="@string/back_to_assignment"
+        android:layout_marginEnd="20dp"
+        android:textSize="17sp"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/shark"
+        android:paddingHorizontal="25dp"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/textview_material_files"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
+            android:text="@string/material_file"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/material_files_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/group_57"
+            android:layout_below="@+id/textview_material_files"/>
+
+        <ImageView
+            android:id="@+id/material_files_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/group_57"
+            android:layout_below="@+id/textview_material_files"
+            android:layout_toEndOf="@+id/material_files_1"/>
+
+        <ImageView
+            android:id="@+id/material_files_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/group_57"
+            android:layout_below="@+id/textview_material_files"
+            android:layout_toEndOf="@id/material_files_2"/>
+
+        <ImageView
+            android:id="@+id/material_files_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_57"
+            android:layout_below="@+id/textview_material_files"
+            android:layout_toEndOf="@+id/material_files_3"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/textview_material_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginVertical="20dp"
+            android:text="@string/material_title"
+            android:textSize="25sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/textview_posted_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="30dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/post_by"
+            android:textSize="12sp"
+            android:textColor="@color/white"/>
+        
+        <androidx.cardview.widget.CardView
+            android:id="@+id/material_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_below="@+id/textview_material_title"
+            android:backgroundTint="@color/shark"
+            app:cardCornerRadius="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:inputType="textMultiLine"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:gravity="top"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="right"
+        android:text="@string/date_material"
+        android:textColor="@color/white"/>
+</LinearLayout>
