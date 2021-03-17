@@ -62,4 +62,57 @@
         <item>Deadline: 14/02/2021</item>
     </string-array>
 
+    //this is all strings that store in activity_club_menu.xml
+    <string name="back_to_profile">Back To Profile</string>
+    <string name="orbit">Orbit</string>
+    <string name="members">13 Members</string>
+    <string name="count_online">3 Online</string>
+    <string name="your_score">Your Score</string>
+    <string name="value_your_score">123</string>
+    <string name="your_rank">Your Rank</string>
+    <string name="value_your_rank">3</string>
+    <string name="club_desc">Club Description</string>
+    <string name="assignment">Assignment</string>
+    <string name="notif_assignment">5 New Assignment</string>
+    <string name="chatroom">Chatroom</string>
+    <string name="notif_chatroom">3 Mentions</string>
+    <string name="hof">Half Of Fame</string>
+    <string name="notif_hof">Your Rank Have Not Changed</string>
+
+    //this is all strings that store in activity_material_menu
+    <string name="back_to_assignment">Back To Assignment</string>
+    <string name="material_file">Material Files</string>
+    <string name="material_title">Material Title</string>
+    <string name="post_by">Posted By : Teacher Name</string>
+    <string name="date_material">Date Posted day/month/year</string>
+
+    //this is all strings that store in activity_join_club including array for recycler view
+    <string-array name="nama_club">
+        <item>Orbit</item>
+        <item>NHK</item>
+        <item>Rohis</item>
+        <item>Badminton</item>
+        <item>Angklung</item>
+        <item>Debat</item>
+    </string-array>
+
+    <string-array name="pendiri">
+        <item>Faishal Eka</item>
+        <item>Puji Saefuloh</item>
+        <item>Badrul Rohman</item>
+        <item>Ilham Pertama</item>
+        <item>Resti Sintiyana</item>
+        <item>Firdaus Haqiqi</item>
+    </string-array>
+
+
+    <string-array name="jumlah_anggota">
+        <item>Total Member : 50</item>
+        <item>Total Member : 26</item>
+        <item>Total Member : 13</item>
+        <item>Total Member : 37</item>
+        <item>Total Member : 26</item>
+        <item>Total Member : 100</item>
+    </string-array>
+
 </resources>
