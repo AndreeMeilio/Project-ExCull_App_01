@@ -28,7 +28,7 @@ public class UsersAssignmentList extends AppCompatActivity {
         teacher = getResources().getStringArray(R.array.teacher_name);
         deadline = getResources().getStringArray(R.array.deadline);
 
-        AssignmentAdapter adapter = new AssignmentAdapter(this, task_name, teacher, deadline);
+        AssignmentListAdapter adapter = new AssignmentListAdapter(this, task_name, teacher, deadline);
         assignment_recyclerview = (RecyclerView) findViewById(R.id.assignment_recycler);
         assignment_recyclerview.setAdapter(adapter);
         assignment_recyclerview.setLayoutManager(new LinearLayoutManager(this));

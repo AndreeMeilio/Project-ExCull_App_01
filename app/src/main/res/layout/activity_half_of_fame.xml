@@ -6,26 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/tundora"
-    tools:context=".ClubMenu">
+    android:background="@color/shark"
+    tools:context=".HalfOfFame">
 
     <TextView
-        android:id="@+id/menuclub_back_to_profile"
-        android:layout_width="wrap_content"
+        android:id="@+id/hof_backto_club_menu"
+        android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:text="@string/back_to_profile"
-        android:gravity="center_vertical"
-        android:layout_gravity="right"
-        android:layout_marginEnd="20dp"
-        android:textSize="17sp"
-        android:textColor="@color/white"/>
+        android:text="Back To Club Menu"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical|end"
+        android:paddingEnd="20dp"
+        android:background="@color/tundora"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="30dp"
-        android:layout_marginBottom="25dp"
-        android:background="@color/shark">
+        android:background="@color/dove_gray">
 
         <ImageView
             android:id="@+id/photo_orbit_clubmenu"
@@ -65,7 +64,7 @@
             android:text="@string/count_online"
             android:textColor="@color/white"
             android:textSize="15sp"/>
-        
+
         <View
             android:id="@+id/just_a_line"
             android:layout_width="4dp"
@@ -117,167 +116,154 @@
             android:text="@string/value_your_rank"
             android:textSize="15sp"
             android:textColor="@color/white"/>
-
-        <TextView
-            android:id="@+id/textview_club_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:layout_below="@id/photo_orbit_clubmenu"
-            android:text="@string/club_desc"
-            android:textSize="15sp"
-            android:textColor="@color/white"/>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="125dp"
-            android:backgroundTint="@color/abbey"
-            android:layout_below="@id/textview_club_desc"
-            app:cardCornerRadius="10dp">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/textview_club_desc"
-                android:background="@android:color/transparent"
-                android:textColor="@color/white"
-                android:inputType="textMultiLine"
-                android:gravity="top"
-                android:padding="10dp"/>
-        </androidx.cardview.widget.CardView>
     </RelativeLayout>
-    
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="25dp"
+        android:text="Half Of Fame"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
         android:backgroundTint="@color/abbey"
-        android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="5dp"
-        app:cardCornerRadius="15dp">
+        app:cardCornerRadius="10dp">
 
         <RelativeLayout
-            android:id="@+id/club_menu_assignment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingStart="10dp"
-            android:paddingVertical="10dp">
+            android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/photo_assignment_clubmenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/group_21"/>
+                android:id="@+id/hof_profile1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/profile"
+                android:layout_marginEnd="25dp"/>
 
             <TextView
-                android:id="@+id/textview_assignment_clubmenu"
+                android:id="@+id/hof_rank_number1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/photo_assignment_clubmenu"
-                android:layout_marginStart="15dp"
-                android:text="@string/assignment"
-                android:textColor="@color/white"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:id="@+id/value_textview_assignment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/photo_assignment_clubmenu"
-                android:layout_below="@+id/textview_assignment_clubmenu"
-                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/hof_profile1"
                 android:layout_marginTop="10dp"
-                android:text="@string/notif_assignment"
-                android:textColor="@color/white"
-                android:textSize="15sp"/>
+                android:text="1st Rank"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/hof_username1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/hof_profile1"
+                android:layout_below="@id/hof_rank_number1"
+                android:text="Alexandria"
+                android:textSize="15sp"
+                android:textColor="@color/white"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
         android:backgroundTint="@color/abbey"
-        android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="5dp"
-        app:cardCornerRadius="15dp">
+        app:cardCornerRadius="10dp">
 
         <RelativeLayout
-            android:id="@+id/club_menu_chatroom"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingStart="10dp"
-            android:paddingVertical="10dp">
+            android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/photo_chatroom_clubmenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/group_35"/>
+                android:id="@+id/hof_profile2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/profile"
+                android:layout_marginEnd="25dp"/>
 
             <TextView
-                android:id="@+id/textview_chatroom_clubmenu"
+                android:id="@+id/hof_rank_number2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/photo_chatroom_clubmenu"
-                android:layout_marginStart="15dp"
-                android:text="@string/chatroom"
-                android:textColor="@color/white"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:id="@+id/value_textview_chatroom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/photo_chatroom_clubmenu"
-                android:layout_below="@+id/textview_chatroom_clubmenu"
-                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/hof_profile2"
                 android:layout_marginTop="10dp"
-                android:text="@string/notif_chatroom"
-                android:textColor="@color/white"
-                android:textSize="15sp"/>
+                android:text="2st Rank"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/hof_username2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/hof_profile2"
+                android:layout_below="@id/hof_rank_number2"
+                android:text="Violet Aprillia"
+                android:textSize="15sp"
+                android:textColor="@color/white"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
         android:backgroundTint="@color/abbey"
-        android:layout_marginHorizontal="30dp"
-        app:cardCornerRadius="15dp">
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="10dp">
 
         <RelativeLayout
-            android:id="@+id/club_menu_hof"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingStart="10dp"
-            android:paddingVertical="10dp">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/photo_hof_clubmenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/group_36"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hof_profile3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="25dp"
+                app:cardCornerRadius="100dp">
 
-            <TextView
-                android:id="@+id/textview_hof_clubmenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/photo_hof_clubmenu"
-                android:layout_marginStart="15dp"
-                android:text="@string/hof"
-                android:textColor="@color/white"
-                android:textSize="20sp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/monoandsix"/>
+            </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/value_textview_hof"
+                android:id="@+id/hof_rank_number3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/photo_hof_clubmenu"
-                android:layout_below="@+id/textview_hof_clubmenu"
-                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/hof_profile3"
                 android:layout_marginTop="10dp"
-                android:text="@string/notif_hof"
-                android:textColor="@color/white"
-                android:textSize="15sp"/>
+                android:text="3st Rank"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/hof_username3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/hof_profile3"
+                android:layout_below="@id/hof_rank_number3"
+                android:text="Mono"
+                android:textSize="15sp"
+                android:textColor="@color/white"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hof_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:paddingHorizontal="35dp"/>
+
 </LinearLayout>

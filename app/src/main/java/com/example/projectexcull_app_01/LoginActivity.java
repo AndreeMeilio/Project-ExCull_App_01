@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
@@ -18,6 +18,10 @@ public class LoginActivity extends AppCompatActivity {
     private EditText login_username, login_password;
     private Button login_button;
     private TextView login_into_register;
+
+    private Spinner login_as_spinner;
+
+    private String login_as[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,5 +68,10 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        login_as = getResources().getStringArray(R.array.login_as);
+        ArrayAdapter login_as_adapter = new ArrayAdapter(this, R.layout.login_as_spinner, R.id.adapter_textview, login_as);
+        login_as_spinner = (Spinner) findViewById(R.id.spinner_login_as);
+        login_as_spinner.setAdapter(login_as_adapter);
     }
 }

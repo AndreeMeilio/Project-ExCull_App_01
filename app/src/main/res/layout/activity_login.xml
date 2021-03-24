@@ -57,6 +57,17 @@
                     android:backgroundTint="@color/white"/>
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                style="@style/LoginCardviewStyle"
+                android:backgroundTint="@color/dim_gray"
+                app:cardCornerRadius="15dp">
+
+                <Spinner
+                    android:id="@+id/spinner_login_as"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
             <Button
                 style="@style/MainButton"
                 android:id="@+id/login_button"

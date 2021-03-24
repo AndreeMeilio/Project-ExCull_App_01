@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectExCull_App_01">
-        <activity android:name=".ClubMenu"></activity>
+        <activity android:name=".HalfOfFame"></activity>
+        <activity android:name=".Assignments" />
+        <activity android:name=".ClubMenu" />
         <activity android:name=".JoinClub" />
         <activity android:name=".MaterialMenu" />
         <activity android:name=".UsersAssignmentList" />

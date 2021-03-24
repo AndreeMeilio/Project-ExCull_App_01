@@ -7,6 +7,11 @@
     <string name="login_havent_acccount">Did Not Have An Account ?</string>
     <string name="login_signup_button">Sign Up</string>
 
+    <string-array name="login_as">
+        <item>Anggota</item>
+        <item>Pembimbing</item>
+    </string-array>
+
     //this is all the strings that store in activity_register.xml
     <string name="register_username_hint">Username</string>
     <string name="register_email_hint">Email</string>
@@ -26,12 +31,12 @@
     <string name="score_textview">Score</string>
     <string name="value_score">1500</string>
     <string name="rank_textview">Rank</string>
-    <string name="value_rank">#10</string>
+    <string name="value_rank">#3</string>
     <string name="userabout_textview">User About</string>
 
     <string name="value_user_about">
-        "Positive is the<br />
-        key of success"
+        "You Know What?<br />"
+        "I Dont Care"
     </string>
 
     <string name="username_textview">Mono</string>
@@ -115,4 +120,47 @@
         <item>Total Member : 100</item>
     </string-array>
 
+
+    <string-array name="assignment_title">
+        <item>Tugas Native PHP</item>
+        <item>PBO Test 1</item>
+        <item>Pemahaman OOP</item>
+        <item>PPL Uji Kompetensi 1</item>
+        <item>PKK Budgeting Test</item>
+        <item>Absensi PWPB</item>
+        <item>LK 08 SQL</item>
+        <item>PWPB Materi MySQL</item>
+        <item>Absensi PBO</item>
+        <item>Absensi PKK</item>
+    </string-array>
+
+    <string-array name="hof_rank">
+        <item>4th Rank</item>
+        <item>5th Rank</item>
+        <item>6th Rank</item>
+        <item>7th Rank</item>
+        <item>8th Rank</item>
+        <item>9th Rank</item>
+        <item>10th Rank</item>
+        <item>11th Rank</item>
+        <item>12th Rank</item>
+        <item>13th Rank</item>
+        <item>14th Rank</item>
+        <item>15th Rank</item>
+    </string-array>
+
+    <string-array name="hof_username">
+        <item>Jackal</item>
+        <item>Lyu Bei</item>
+        <item>Abraham</item>
+        <item>Daniel EManuel</item>
+        <item>Sung Jin Wo</item>
+        <item>Achille Fernando</item>
+        <item>Hideyoshi Muramasa</item>
+        <item>Ah Ryung</item>
+        <item>Diaz Nicola</item>
+        <item>Persia Juliet</item>
+        <item>Kazumi Keiko</item>
+        <item>Clarino Aami</item>
+    </string-array>
 </resources>

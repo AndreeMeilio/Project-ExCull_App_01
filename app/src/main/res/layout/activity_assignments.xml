@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/shark"
+    tools:context=".Assignments">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tundora"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/assignment_chatroom"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:text="Chatroom"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginStart="25dp"/>
+
+        <TextView
+            android:id="@+id/assignment_clubmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:text="Club Menu"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/assignment_backto_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:text="Back To Profile"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/assignment_club_bar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="-20dp"
+            app:cardCornerRadius="15dp"
+            android:layout_below="@+id/assignment_chatroom"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/tundora">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/orbit_bar"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:paddingTop="20dp"
+                android:cropToPadding="true"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/assignment_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject : Club Subject"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginStart="25dp"
+            android:layout_below="@+id/assignment_club_bar"/>
+
+        <TextView
+            android:id="@+id/assignment_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room : Club Room"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginStart="25dp"
+            android:layout_below="@+id/assignment_subject"/>
+
+        <TextView
+            android:id="@+id/assignment_gmeet_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google Meet : http://Gmeet.link.com"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginStart="25dp"
+            android:layout_below="@+id/assignment_room"
+            android:layout_marginBottom="15dp"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/assignment_task_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"/>
+</LinearLayout>

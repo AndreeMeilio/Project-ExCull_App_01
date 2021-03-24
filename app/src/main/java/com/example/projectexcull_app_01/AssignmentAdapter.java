@@ -4,56 +4,52 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.AssignmentViewHolder> {
-
     Context context;
-    String[] task_name;
-    String[] teacher_name;
-    String[] deadline;
+    int[] assigment_logo;
+    String[] assigment_title;
 
-    public AssignmentAdapter(Context context, String[] task_name, String[] teacher_name, String[] deadline){
+    public AssignmentAdapter(Context context, int[] assigment_logo, String[] assigment_title) {
         this.context = context;
-        this.task_name = task_name;
-        this.teacher_name = teacher_name;
-        this.deadline = deadline;
+        this.assigment_logo = assigment_logo;
+        this.assigment_title = assigment_title;
     }
 
     @NonNull
     @Override
     public AssignmentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-
-        View view = inflater.inflate(R.layout.assigment_recycler_list, parent, false);
+        View view = inflater.inflate(R.layout.assignment_recycler, parent, false);
 
         return new AssignmentViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull AssignmentViewHolder holder, int position) {
-        holder.text_task_name.setText(task_name[position]);
-        holder.text_teacher_name.setText(teacher_name[position]);
-        holder.text_deadline.setText(deadline[position]);
+        holder.text_assignment_title.setText(assigment_title[position]);
+        holder.img_assignment_logo.setImageResource(assigment_logo[position]);
     }
 
     @Override
     public int getItemCount() {
-        return task_name.length;
+        return assigment_title.length;
     }
 
-    public class AssignmentViewHolder extends RecyclerView.ViewHolder{
-        TextView text_task_name, text_teacher_name, text_deadline;
+    public class AssignmentViewHolder extends RecyclerView.ViewHolder {
+        ImageView img_assignment_logo;
+        TextView text_assignment_title;
 
         public AssignmentViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            text_task_name = itemView.findViewById(R.id.recycler_task_name);
-            text_teacher_name = itemView.findViewById(R.id.recycler_teacher_name);
-            text_deadline = itemView.findViewById(R.id.recycler_deadline);
+            img_assignment_logo = itemView.findViewById(R.id.assignment_recycler_image);
+            text_assignment_title = itemView.findViewById(R.id.assignment_title);
         }
     }
 }
